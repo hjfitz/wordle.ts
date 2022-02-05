@@ -34,13 +34,16 @@ async function main() {
 	}
 
 	out(`
-	Fetching word list from ${wordListUrl}
-	Candidate for search: ${chars}
+	${[
+	`Fetching word list from ${wordListUrl}`,
+	`${chars ? `Candidate for search: "${chars}"` : ''}`,
+	`${pattern ? `Pattern to test: "${pattern}"` : ''}`
+	].filter(Boolean).join('\n')}
 	`)
 
 	const wordList = await fetchWordList(wordListUrl)
 
-	let matches: WordList = []
+	let matches: WordList = wordList
 
 	if (chars) {
 		matches = findMatchingWords(chars.toLowerCase(), wordList)

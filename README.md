@@ -1,6 +1,6 @@
-# Wordle.ts
+# 🐢 wrdl
 
-CLI Wordle solver because my TypeScript is better than my English
+> CLI Wordle solver because my TypeScript is better than my English
 
 ## Getting Started
 
