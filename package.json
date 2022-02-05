@@ -1,13 +1,13 @@
 {
   "name": "wrdl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "find": "ts-node src",
-	"build": "tsc --pretty",
-	"build:clean": "rm -rf dist/ && yarn build",
-	"prepublish": "yarn build:clean"
+    "build": "tsc --pretty",
+    "build:clean": "rm -rf dist/ && yarn build",
+    "prepublish": "yarn build:clean"
   },
   "dependencies": {
     "axios": "^0.25.0",
