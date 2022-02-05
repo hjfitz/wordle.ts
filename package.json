@@ -7,10 +7,11 @@
     "wrdl": "node dist/cli"
   },
   "scripts": {
-    "find": "ts-node src",
+    "find": "ts-node src/cli",
     "build": "tsc --pretty",
     "build:clean": "rm -rf dist/ && yarn build",
-    "prepublish": "yarn build:clean"
+    "prepublish": "yarn build:clean",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.25.0",
@@ -18,8 +19,13 @@
     "commander": "^9.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
     "@types/cli-progress": "^3.9.2",
+    "@types/jest": "^27.4.0",
     "@types/node": "^17.0.15",
+    "babel-jest": "^27.5.0",
     "jest": "^27.5.0",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.5"
