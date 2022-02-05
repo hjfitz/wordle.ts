@@ -26,6 +26,11 @@ async function main() {
 
 	if (list) wordListUrl = list
 
+	if (!chars) {
+		console.error(prog.helpInformation())
+		process.exit(1)
+	}
+
 	out(`
 	Fetching word list from ${wordListUrl}
 	Candidate for search: ${chars}
