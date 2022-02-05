@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
+  "bin": {
+	  "wrdl": "node dist/cli"
+  },
   "scripts": {
     "find": "ts-node src",
     "build": "tsc --pretty",
